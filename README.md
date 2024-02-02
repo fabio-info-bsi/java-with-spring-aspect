@@ -12,3 +12,5 @@ Um exemplo da utilização de Spring-Aspects(AOP) com Spring contex em uma aplic
 - @Around
 - Annotation Java @LogExecutionTime
 - @Order
+- @Before
+- @AfterReturning
