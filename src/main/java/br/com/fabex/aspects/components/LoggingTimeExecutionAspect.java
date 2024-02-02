@@ -11,6 +11,7 @@ public class LoggingTimeExecutionAspect {
 
     /**
      * Apply logic when used with annotation @LogExecutionTime.
+     *
      * @param joinPoint
      * @return Object
      * @throws Throwable
@@ -27,6 +28,7 @@ public class LoggingTimeExecutionAspect {
     /**
      * Apply logic for whichever method call on package: br.com.fabex.aspects.services
      * (only package - not applied to package "br.com.fabex.aspects.services.bo").
+     *
      * @param joinPoint
      * @return Object
      * @throws Throwable

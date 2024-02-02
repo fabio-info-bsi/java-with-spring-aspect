@@ -17,7 +17,7 @@ public class SpringAspectsApplication {
 
         /* Two aspects applied in same annotation: @ControllAccessBusiness */
         BusinessService bean1 = context.getBean(BusinessService.class);
-        bean1.executorBusiness();
+        bean1.executorBusiness("Fabex", 171);
 
     }
 }
