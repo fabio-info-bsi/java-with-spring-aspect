@@ -20,20 +20,20 @@ public class LoggingTimeExecutionAspect {
         long startTime = System.currentTimeMillis();
         Object proceed = joinPoint.proceed();
         long endTime = System.currentTimeMillis();
-        System.out.println(joinPoint.getSignature() + " executed in " + (endTime - startTime) + "ms");
+        System.out.println("LoggingTimeExecutionAspect::logExecutionTime " + joinPoint.getSignature() + " executed in " + (endTime - startTime) + "ms");
         return proceed;
     }
 
     /**
-     * Apply logic for whichever method call on package: br.com.fabex.aspects.services .
-     *
+     * Apply logic for whichever method call on package: br.com.fabex.aspects.services
+     * (only package - not applied to package "br.com.fabex.aspects.services.bo").
      * @param joinPoint
      * @return Object
      * @throws Throwable
      */
     @Around("execution(* br.com.fabex.aspects.services.*.*(..))")
     public Object helloForWhicheverMethodExecution(final ProceedingJoinPoint joinPoint) throws Throwable {
-        System.out.println("Hello::" + joinPoint.getSignature());
+        System.out.println("LoggingTimeExecutionAspect::helloForWhicheverMethodExecution::" + joinPoint.getSignature());
         return joinPoint.proceed();
     }
 }
